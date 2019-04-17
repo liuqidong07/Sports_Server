@@ -1,0 +1,25 @@
+1.userinfo接口
+(1)./userinfo/test  测试服务器与小程序的连接
+	请求：get
+	响应：'Hello World!'
+
+(2)./userinfo/get_openid   小程序获取openid和session_key
+	请求：post
+	     	{
+		'js_code':  ,
+		}
+	响应：json
+	     {'openid': , 'session_key': }
+
+(3)./userinfo/create_user  实现用户账户的创建，将用户信息存入数据库
+	请求：post
+		{openid,
+		nickName,
+		gender,
+		language,
+		city,
+		province,
+		country,
+		portrait}
+	响应：json
+		{'result':是否是新用户}
